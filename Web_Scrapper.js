@@ -1,13 +1,17 @@
-var http = require("http")
+var express = require('express');
+var fs = require('fs');
+var request = require('request');
+var cheerio = require('cheerio');
+var app     = express();
 
-var options = {
-  host: 'www.canddi.com',
-  port: 80,
-  path: '/index.html'
-};
+app.get('/scrape', function(req, res){
 
-http.get(options, function(res) {
-  console.log("Got response: " + res.statusCode);
-}).on('error', function(err) {
-  console.log("Got error: " + err.message);
-});
+  
+
+})
+
+app.listen('8888')
+
+console.log('Localhost 8888');
+
+exports = module.exports = app;

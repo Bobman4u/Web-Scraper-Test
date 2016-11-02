@@ -1,0 +1,11 @@
+{
+  "name"         : "web-scraper",
+  "version"      : "0.0.1",
+  "main"         : "web-scraper.js",
+  "author"       : "Bobman4u",
+  "dependencies" : {
+    "express"    : "latest",
+    "request"    : "latest",
+    "cheerio"    : "latest"
+  }
+}
