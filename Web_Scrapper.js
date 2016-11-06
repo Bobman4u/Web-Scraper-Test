@@ -6,11 +6,20 @@ var app     = express();
 
 app.get('/scrape', function(req, res){
 
-  
+  url = "https://www.canddi.com/"
 
-})
+  request(url, function(error, response, html){
+  		if (!error) {
 
-app.listen('8888')
+  			var $ = cheerio.load(html);
+			
+			var title, phoneNo, address, email
+
+  		};
+    });
+});
+
+app.listen('8888');
 
 console.log('Localhost 8888');
 
