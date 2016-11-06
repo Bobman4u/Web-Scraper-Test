@@ -1,10 +1,9 @@
 {
-  "name"         : "web-scraper",
+  "name"         : "node-test",
   "version"      : "0.0.1",
-  "main"         : "web-scraper.js",
-  "author"       : "Bobman4u",
+  "main"         : "Web_Scrapper.js",
+  "author"       : "Robert",
   "dependencies" : {
-    "express"    : "latest",
     "request"    : "latest",
     "cheerio"    : "latest"
   }

@@ -1,26 +1,23 @@
-var express = require('express');
-var fs = require('fs');
-var request = require('request');
-var cheerio = require('cheerio');
-var app     = express();
+var request = require("request"),
+  cheerio = require("cheerio"),
+  url = "https://www.canddi.com/contact/";
+  
+request(url, function (error, response, body) {
+  if (!error) {
+    var $ = cheerio.load(body);
 
-app.get('/scrape', function(req, res){
+    var name, phone, email, address;
 
-  url = "https://www.canddi.com/"
-
-  request(url, function(error, response, html){
-  		if (!error) {
-
-  			var $ = cheerio.load(html);
-			
-			var title, phoneNo, address, email
-
-  		};
-    });
+    name = $("[h4].firstChild.data").html();
+    phone = $().html();
+    email = $().html();
+    address = $().html();
+      
+    console.log("Comapny Name; " + name);
+    console.log("Phone; " + phone);
+    console.log("Email; " + email);
+    console.log("Address; " + address);
+  } else {
+    console.log("We’ve encountered an error: " + error);
+  }
 });
-
-app.listen('8888');
-
-console.log('Localhost 8888');
-
-exports = module.exports = app;
